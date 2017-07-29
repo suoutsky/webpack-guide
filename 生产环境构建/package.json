@@ -1,0 +1,25 @@
+{
+  "name": "output",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "webpack  --watch",
+    "build": "webpack",
+    "start": "webpack-dev-server --open",
+    "dev": "webpack --env=dev --progress --profile --colors",
+    "devc": "webpack --env=prod --progress --profile --colors"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "lodash": "^4.17.4"
+  },
+  "devDependencies": {
+    "clean-webpack-plugin": "^0.1.16",
+    "html-webpack-plugin": "^2.29.0",
+    "webpack": "^3.4.1",
+    "webpack-manifest-plugin": "^1.2.1"
+  }
+}
