@@ -10,10 +10,18 @@ Vue.config.debug = true;
 
 // 路由配置
 const router = new VueRouter({
-  router: [
+  routes: [
       {
           path: '/button',
           component: require('./routers/button.vue')
+      },
+      {
+        path: '/vnode',
+        component: require('./routers/vnode.vue')
+      },
+      {
+        path: '/vtable',
+        component: require('./routers/vtable.vue')
       }
   ]
 });
@@ -21,5 +29,5 @@ const router = new VueRouter({
 new Vue({
     el: '#app',
     router: router,
-    rende: h => h(App)
+    render: h => h(App)
 });

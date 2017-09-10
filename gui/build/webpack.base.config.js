@@ -18,9 +18,11 @@
                options: {
                    loaders: {
                        css: 'vue-style-loader!css-loader',
-                       less: 'vue-style-loader!css-loader!less-loader',
-                       html: 'babel-loader' 
+                       less: 'vue-style-loader!css-loader!less-loader'
                    },
+                   postLoaders: {
+                     html: 'babel-loader'
+                   }
                }
            },
            {

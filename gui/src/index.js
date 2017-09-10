@@ -13,8 +13,8 @@ const iview = {
 }
 
 const install = function (Vue, opts = {}) {
-    locale.use(opts.locale);
-    locale.i18n(opts.i18n);
+    // locale.use(opts.locale);
+    // locale.i18n(opts.i18n);
 
     Object.keys(iview).forEach((key) => {
       Vue.component(key, iview[key]);
