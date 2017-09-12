@@ -29,6 +29,7 @@
              vue: 'vue/dist/vue.esm.js'
          }
      },
+    devtool: 'inline-source-map',
     plugins: [
         new webpack.optimize.CommonsChunkPlugin({
             name: 'vendors',

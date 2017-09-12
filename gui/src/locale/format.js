@@ -16,7 +16,7 @@ export default function() {
      */
     function template(string, ...args) {
         // 处理第二个参数传对象或者数组的情况
-        if (args.length === 1 && typeof arg[0] === 'object') {
+        if (args.length === 1 && typeof args[0] === 'object') {
             args = args[0];
         }
         // 处理没有传参数或者参数不是对象的情况

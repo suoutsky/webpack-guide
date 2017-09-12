@@ -5,6 +5,7 @@
           <li><router-link to="/button">button</router-link></li>
           <li><router-link to="/vnode">vnode</router-link></li>
           <li><router-link to="/vtable">vtable</router-link></li>
+          <li><router-link to="/modal">modal</router-link></li>
         </ul>
       </nav>
       <router-view></router-view>

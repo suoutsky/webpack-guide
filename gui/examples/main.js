@@ -22,6 +22,10 @@ const router = new VueRouter({
       {
         path: '/vtable',
         component: require('./routers/vtable.vue')
+      },
+      {
+        path: '/modal',
+        component: require('./routers/modal.vue')
       }
   ]
 });

@@ -15,7 +15,22 @@ export default {
     methods: {
         dispatch(componentName, eventName, params) {
             let parent = this.$parent || ths.$root;
-            let name = par
+            let name = parent.$options.name;
+
+            while (parent && (!name || name !== componentName)) {
+                parent = parent.$parent;
+
+                if(parent) {
+                    name = parent.$parent;
+                }
+            }
+
+            if (parent) {
+                parent.$emit.apply(parent, [eventName].concat(params));
+            }
+        },
+        broadcast(componentName, eventName, params) {
+            broadcast.call(this, componentName, eventName, params);
         }
     }
 }

@@ -6,7 +6,7 @@ import Vue from 'vue';
 import deepmerge from 'deepmerge'; // 好吧深拷贝的库
 import Fromat from './format';
 
-const format = format(Vue); //ivem 并没有接 Vue   elm接了    // const { hasOwn } = Vue.util;
+const format = Fromat(Vue); //ivem 并没有接 Vue   elm接了    // const { hasOwn } = Vue.util;
 
 let lang = defaultLang;
 let merged = false;
