@@ -7,19 +7,27 @@ import deepmerge from 'deepmerge'; // 好吧深拷贝的库
 import Fromat from './format';
 
 const format = Fromat(Vue); //ivem 并没有接 Vue   elm接了    // const { hasOwn } = Vue.util;
-
+// 设置默认语言
 let lang = defaultLang;
+// 标志是否合并过
 let merged = false;
+
 let i18nHandler = function() {
+    // 获取 vue-i18n的模板方法
     const vuei18n = Object.getPrototypeOf(this || Vue).$t;
+
+    // 如果有引入 vue-i18n 则使用它
     if (typeof vuei18n === 'function') {
         if (!merged) {
+            // 设置已合并
             merged = true;
+            // 配置 vue-i18n
             Vue.Locale(
                 Vue.config.lang,
                 deepmerge(lang, Vue.locale(Vue.config.lang) || {}, {clone: true})
             );
         }
+        // 使用 vue-i18n
         return vuei18n.apply(this, arguments);
     }
 };
