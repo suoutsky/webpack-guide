@@ -21,7 +21,7 @@
          path: path.join(__dirname, '../examples/dist'),
          publicPath: '',
          filename: '[name].js',
-         chunkFilename: '[name].chunk.js'
+         chunkFilename: '[name].js'
      },
      resolve: {
          alias: {

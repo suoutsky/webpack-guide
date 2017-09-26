@@ -26,6 +26,10 @@ module.exports = merge(webpackBaseConfig, {
         }
     },
     plugins: [
+        new webpack.DllReferencePlugin({
+            manifest: require('../dist/manifest.json'),
+            context: __dirname
+        }),
         // @todo
         new webpack.DefinePlugin({
             'process.env': {

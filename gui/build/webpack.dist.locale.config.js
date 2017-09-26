@@ -20,7 +20,8 @@ module.exports = {
         filename: '[name].js',
         library: 'iview/locale',
         libraryTarget: 'umd',
-        umdNameDefine: true
+        // umdNameDefine: true
+        // filename: "someLibName.js"
     },
     plugins: [
        new webpack.DefinePlugin({
