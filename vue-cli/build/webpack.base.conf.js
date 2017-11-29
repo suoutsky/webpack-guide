@@ -18,8 +18,11 @@ module.exports = {
       ? config.build.assetsPublicPath
       : config.dev.assetsPublicPath
   },
+  // 配置模块如何解析
   resolve: {
+    // 自动解析确定的扩展  import File from '../path/to/file'  可以不带（.js）
     extensions: ['.js', '.vue', '.json'],
+    // 创建 import 或 require 的别名，来确保模块引入变得更简单
     alias: {
       'vue$': 'vue/dist/vue.esm.js',
       '@': resolve('src'),

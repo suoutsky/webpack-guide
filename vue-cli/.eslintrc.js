@@ -17,6 +17,8 @@ module.exports = {
   ],
   // add your custom rules here
   'rules': {
+    //语句强制分号结尾
+    "semi": [2, "always"],
     // allow paren-less arrow functions
     'arrow-parens': 0,
     // allow async-await
